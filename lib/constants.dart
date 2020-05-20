@@ -1,31 +1,28 @@
 import 'package:flutter/material.dart';
 
+final Color boxColor = Color(0x0040d4e6);
 
-// Login Box
-//Transform.translate(
-//offset: Offset(42.0, 582.0),
-//child: Container(
-//width: 291.0,
-//height: 61.0,
-//decoration: BoxDecoration(
-//borderRadius: BorderRadius.circular(31.0),
-//color: const Color(0xffffffff),
-//border: Border.all(width: 1.0, color: const Color(0xff707070)),
-//),
-//),
-//),
+final kLabelStyle = TextStyle(
+  fontFamily: 'Bahnschrift',
+  fontSize: 24,
+  color: Colors.white,
+  fontWeight: FontWeight.w700,
+);
 
-// Login Text
-//Transform.translate(
-//offset: Offset(158.5, 600.5),
-//child: Text(
-//'Login',
-//style: TextStyle(
-//fontFamily: 'Bahnschrift',
-//fontSize: 24,
-//color: const Color(0xff381460),
-//fontWeight: FontWeight.w700,
-//),
-//textAlign: TextAlign.left,
-//),
-//),
+final kBoxDecoration = BoxDecoration(
+  color: Color(0xff67359F),
+  borderRadius:  BorderRadius.circular(31.0),
+  boxShadow: [
+    BoxShadow(
+      color: Colors.black45,
+      blurRadius: 6.0,
+      offset: Offset(0,2),
+    )
+  ]
+);
+
+final kHintTextStyle = TextStyle(
+  fontFamily: 'Bahnschrift',
+  color: Colors.white54,
+);
+
