@@ -14,6 +14,8 @@ dependencies:
 
   cupertino_icons: ^0.1.3
   simple_animations: ^1.3.4
+  fit_image: ^0.1.2
+
 
 
 dev_dependencies:
@@ -51,6 +53,17 @@ flutter:
       fonts:
         - asset: fonts/BAHNSCHRIFT 8.ttf
 
+    - family: Fredoka One
+      fonts:
+        - asset: fonts/FredokaOne-Regular.ttf
+
+    - family: Pangolin
+      fonts:
+        - asset: fonts/Pangolin-Regular.ttf
+
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
