@@ -64,6 +64,22 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: fonts/Montserrat-Regular.ttf
+
+    - family: Open Sans
+      fonts:
+        - asset: fonts/OpenSans_Regular.ttf
+
+    - family: Oswald
+      fonts:
+        - asset: fonts/Oswald_Reg.ttf
+
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto_Regular.ttf
+
+    - family: Lobster
+      fonts:
+        - asset: fonts/Lobster-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

@@ -1,13 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:svcecanteen/Screens/card_screen.dart';
 import 'package:svcecanteen/Services/fade_animation.dart';
 
-class LoginPage extends StatefulWidget {
+class LoginScreen extends StatefulWidget {
+  static const String id = 'login_screen';
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,8 +24,19 @@ class _LoginPageState extends State<LoginPage> {
                 child: Stack(
                   children: <Widget>[
                     Padding(
+                      padding: const EdgeInsets.only(top: 18.0,right: 350.0),
+                      child: FlatButton(
+                        onPressed: (){
+                          Navigator.pop(context);
+                        },
+                        child: Icon(Icons.arrow_back_ios,
+                        size: 25.0,
+                        color: Colors.grey[800],),
+                      ),
+                    ),
+                    Padding(
                       padding: EdgeInsets.symmetric(
-                          vertical: 80.0, horizontal: 20.0),
+                          vertical: 90.0, horizontal: 20.0),
                       child: Container(
                         margin: EdgeInsets.only(left: 6.0),
                         child: Column(
@@ -123,7 +136,9 @@ class _LoginPageState extends State<LoginPage> {
                               Container(
                                 child: Center(
                                   child: FlatButton(
-                                    onPressed: (){},
+                                    onPressed: (){
+                                      Navigator.pushNamed(context, CardScreen.id);
+                                    },
                                     color: Color(0xFFFE346E),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(20.0)

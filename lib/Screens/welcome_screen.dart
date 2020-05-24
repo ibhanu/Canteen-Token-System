@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:svcecanteen/Screens/login_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
+  static const String id = 'welcome_screen';
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  WelcomeScreen id = 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +20,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             children: <Widget>[
               Expanded(
                   flex: 1,
-                  child: Image.asset('assets/images/Artboard_1.png'),
+                  child: Image.asset('assets/images/Artboard_1.jpg'),
               ),
               SizedBox(height: 20.0,),
               Container(
@@ -54,7 +56,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       ),
                       SizedBox(height: 15.0,),
                       FlatButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.pushNamed(context, LoginScreen.id);
+                        },
                         color: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32.0),
