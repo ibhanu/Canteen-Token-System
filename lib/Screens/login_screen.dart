@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:svcecanteen/Screens/card_screen.dart';
+import 'package:svcecanteen/Screens/dashboard_screen.dart';
+import 'package:svcecanteen/Screens/orders_screen.dart';
 import 'package:svcecanteen/Services/fade_animation.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -137,7 +138,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 child: Center(
                                   child: FlatButton(
                                     onPressed: (){
-                                      Navigator.pushNamed(context, CardScreen.id);
+                                      Navigator.pushNamed(context, DashboardScreen.id);
                                     },
                                     color: Color(0xFFFE346E),
                                     shape: RoundedRectangleBorder(

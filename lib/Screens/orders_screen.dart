@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:svcecanteen/Screens/breakfast_screen.dart';
 
-class CardScreen extends StatefulWidget {
-  static const String id = 'card_screen';
+class OrderScreen extends StatefulWidget {
+  static const String id = 'orders_screen';
   @override
-  _CardScreenState createState() => _CardScreenState();
+  _OrderScreenState createState() => _OrderScreenState();
 }
 
-class _CardScreenState extends State<CardScreen> {
+class _OrderScreenState extends State<OrderScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,7 +30,7 @@ class _CardScreenState extends State<CardScreen> {
                                 Navigator.pop(context);
                               },
                               child: Icon(Icons.arrow_back_ios,
-                              color: Colors.grey[800],
+                                color: Colors.grey[800],
                                 size: 26.0,
                               ),
                             ),
@@ -80,19 +80,19 @@ class _CardScreenState extends State<CardScreen> {
                                         Padding(
                                           padding: const EdgeInsets.only(top: 18.0,bottom: 10.0),
                                           child: Hero(
-                                              tag: 'breakfast',
-                                              child: Container(
-                                                  child: Image.asset('assets/images/1.png'),
-                                              ),
+                                            tag: 'breakfast',
+                                            child: Container(
+                                              child: Image.asset('assets/images/1.png'),
+                                            ),
                                           ),
                                         ),
                                         Text('Breakfast',
-                                        style: TextStyle(
-                                          fontSize: 28.0,
-                                          fontFamily: 'Oswald',
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                        ),),
+                                          style: TextStyle(
+                                            fontSize: 28.0,
+                                            fontFamily: 'Oswald',
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                          ),),
                                       ],
                                     ),
                                   ),
@@ -105,7 +105,7 @@ class _CardScreenState extends State<CardScreen> {
                                     height: 195.0,
                                     width: 167.0,
                                     decoration: BoxDecoration(
-                                    color: Color(0xFF82ACFF),
+                                      color: Color(0xFF82ACFF),
                                       borderRadius: BorderRadius.circular(22.0),
                                       shape: BoxShape.rectangle,
                                       boxShadow: [

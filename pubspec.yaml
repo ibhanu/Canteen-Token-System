@@ -86,6 +86,10 @@ flutter:
     - family: Bangers
       fonts:
         - asset: fonts/Bangers-Regular.ttf
+
+    - family: Comic Sans
+      fonts:
+        - asset: fonts/ComicSansReg.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
