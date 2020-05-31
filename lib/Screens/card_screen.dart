@@ -1,6 +1,6 @@
-import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:svcecanteen/Screens/breakfast_screen.dart';
 
 class CardScreen extends StatefulWidget {
   static const String id = 'card_screen';
@@ -21,13 +21,6 @@ class _CardScreenState extends State<CardScreen> {
                   children: [
                     Container(
                       padding: EdgeInsets.only(bottom: 28.0),
-//                      decoration: BoxDecoration(
-//                        color: Color(0xFFFE346E),
-//                        borderRadius: BorderRadius.only(
-//                            bottomLeft: Radius.circular(28.0),
-//                            bottomRight: Radius.circular(28.0)
-//                        ),
-//                      ),
                       child: Column(
                         children: [
                           Padding(
@@ -63,7 +56,9 @@ class _CardScreenState extends State<CardScreen> {
                             children: [
                               Expanded(
                                 child: FlatButton(
-                                  onPressed: (){},
+                                  onPressed: (){
+                                    Navigator.pushNamed(context, BreakfastScreen.id);
+                                  },
                                   child: Container(
                                     height: 195.0,
                                     width: 167.0,
@@ -73,7 +68,7 @@ class _CardScreenState extends State<CardScreen> {
                                       shape: BoxShape.rectangle,
                                       boxShadow: [
                                         BoxShadow(
-                                          color: Colors.grey[300],
+                                          color: Colors.grey[500],
                                           blurRadius: 0.2,
                                           spreadRadius: 0.2,
                                           offset: Offset(5.0,5.0),
@@ -84,7 +79,12 @@ class _CardScreenState extends State<CardScreen> {
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.only(top: 18.0,bottom: 10.0),
-                                          child: Image.asset('assets/images/1.png'),
+                                          child: Hero(
+                                              tag: 'breakfast',
+                                              child: Container(
+                                                  child: Image.asset('assets/images/1.png'),
+                                              ),
+                                          ),
                                         ),
                                         Text('Breakfast',
                                         style: TextStyle(
@@ -110,7 +110,7 @@ class _CardScreenState extends State<CardScreen> {
                                       shape: BoxShape.rectangle,
                                       boxShadow: [
                                         BoxShadow(
-                                          color: Colors.grey[300],
+                                          color: Colors.grey[500],
                                           blurRadius: 0.2,
                                           spreadRadius: 0.2,
                                           offset: Offset(5.0,5.0),
@@ -155,7 +155,7 @@ class _CardScreenState extends State<CardScreen> {
                                       shape: BoxShape.rectangle,
                                       boxShadow: [
                                         BoxShadow(
-                                          color: Colors.grey[300],
+                                          color: Colors.grey[500],
                                           blurRadius: 0.2,
                                           spreadRadius: 0.2,
                                           offset: Offset(5.0,5.0),
@@ -193,7 +193,7 @@ class _CardScreenState extends State<CardScreen> {
                                       shape: BoxShape.rectangle,
                                       boxShadow: [
                                         BoxShadow(
-                                          color: Colors.grey[300],
+                                          color: Colors.grey[500],
                                           blurRadius: 0.2,
                                           spreadRadius: 0.2,
                                           offset: Offset(5.0,5.0),

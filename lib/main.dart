@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:svcecanteen/Screens/breakfast_screen.dart';
 import 'package:svcecanteen/Screens/card_screen.dart';
+import 'package:svcecanteen/Screens/dashboard_screen.dart';
 import 'package:svcecanteen/Screens/login_screen.dart';
 import 'package:svcecanteen/Screens/welcome_screen.dart';
 
 void main() {
-  runApp(Cantina());
+  runApp(DashboardScreen());
 }
 
 class Cantina extends StatelessWidget {
@@ -17,6 +19,8 @@ class Cantina extends StatelessWidget {
         WelcomeScreen.id: (context)=>WelcomeScreen(),
         LoginScreen.id: (context)=>LoginScreen(),
         CardScreen.id: (context)=>CardScreen(),
+        DashboardScreen.id: (context)=>DashboardScreen(),
+        BreakfastScreen.id: (context)=>BreakfastScreen(),
       },
     );
   }
