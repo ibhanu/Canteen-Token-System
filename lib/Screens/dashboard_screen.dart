@@ -11,7 +11,7 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  int _currentIndex= 0;
+  int _currentIndex = 0;
   PageController _pageController;
 
   @override
@@ -25,7 +25,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
     _pageController.dispose();
     super.dispose();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -124,7 +123,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       borderRadius: BorderRadius.circular(28.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsets.only(left: 20.0,right: 20.0,top: 15.0,bottom: 15.0),
+                                      padding: const EdgeInsets.only(
+                                          left: 20.0,
+                                          right: 20.0,
+                                          top: 15.0,
+                                          bottom: 15.0),
                                       child: Text(
                                         'Order',
                                         style: TextStyle(
@@ -136,14 +139,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(height: 24.0,),
-                                  Text('Hey! We are taking orders.\n   Get that deliciousness.',
-                                  style: TextStyle(
-                                    fontFamily: 'Comic Sans',
-                                    fontSize: 20.0,
-                                    color: Colors.grey[600],
-                                    fontWeight: FontWeight.w900,
-                                  ),)
+                                  SizedBox(
+                                    height: 24.0,
+                                  ),
+                                  Text(
+                                    'Hey! We are taking orders.\n   Get that deliciousness.',
+                                    style: TextStyle(
+                                      fontFamily: 'Comic Sans',
+                                      fontSize: 20.0,
+                                      color: Colors.grey[600],
+                                      fontWeight: FontWeight.w900,
+                                    ),
+                                  )
                                 ],
                               ),
                             ),
@@ -154,6 +161,26 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ],
                 ),
               ),
+//              PageView(
+//                controller: _pageController,
+//                onPageChanged: (index) {
+//                  setState(() => _currentIndex = index);
+//                },
+//                children: <Widget>[
+//                  Container(
+//                    color: Colors.blueGrey,
+//                  ),
+//                  Container(
+//                    color: Colors.red,
+//                  ),
+//                  Container(
+//                    color: Colors.green,
+//                  ),
+//                  Container(
+//                    color: Colors.blue,
+//                  ),
+//                ],
+//              ),
             ],
           ),
         ),
@@ -164,62 +191,65 @@ class _DashboardScreenState extends State<DashboardScreen> {
           selectedIndex: _currentIndex,
           onItemSelected: (index) {
             setState(() => _currentIndex = index);
-            _pageController.animateToPage(index, duration: Duration(milliseconds: 300), curve: Curves.elasticIn);
+            _pageController.animateToPage(index,
+                duration: Duration(milliseconds: 300), curve: Curves.elasticIn);
           },
           items: <BottomNavyBarItem>[
             BottomNavyBarItem(
-              activeColor: Color(0xFF28E2E2),
+                activeColor: Color(0xFF28E2E2),
                 inactiveColor: Color(0xFF28E2E2),
                 textAlign: TextAlign.center,
-                title: Text('Eat',
+                title: Text(
+                  'Eat',
                   style: TextStyle(
                     color: Colors.black,
                     fontFamily: 'Bangers',
                     fontSize: 28.0,
                     fontWeight: FontWeight.normal,
-                  ),),
-                icon: Icon(Icons.fastfood)
-            ),
+                  ),
+                ),
+                icon: Icon(Icons.fastfood)),
             BottomNavyBarItem(
-              activeColor: Color(0xFF82ACFF),
+                activeColor: Color(0xFF82ACFF),
                 textAlign: TextAlign.center,
-                title: Text('Orders',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Bangers',
-                  fontSize: 27.0,
-                  fontWeight: FontWeight.normal
-                ),),
-                icon: Icon(Icons.shopping_cart)
-            ),
-            BottomNavyBarItem(
-              activeColor: Color(0xFF8F71FF),
-                textAlign: TextAlign.center,
-                title: Text('Profile',
+                title: Text(
+                  'Orders',
                   style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: 'Bangers',
-                    fontSize: 27.0,
-                    fontWeight: FontWeight.normal
-                  ),),
-                icon: Icon(Icons.person,)
-            ),
+                      color: Colors.black,
+                      fontFamily: 'Bangers',
+                      fontSize: 27.0,
+                      fontWeight: FontWeight.normal),
+                ),
+                icon: Icon(Icons.shopping_cart)),
             BottomNavyBarItem(
-              activeColor: Color(0xFFFF5D9E),
+                activeColor: Color(0xFF8F71FF),
                 textAlign: TextAlign.center,
-                title: Text('About',
+                title: Text(
+                  'Profile',
                   style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: 'Bangers',
-                    fontSize: 28.0,
-                    fontWeight: FontWeight.normal
-                  ),),
-                icon: Icon(Icons.info)
-            ),
+                      color: Colors.black,
+                      fontFamily: 'Bangers',
+                      fontSize: 27.0,
+                      fontWeight: FontWeight.normal),
+                ),
+                icon: Icon(
+                  Icons.person,
+                )),
+            BottomNavyBarItem(
+                activeColor: Color(0xFFFF5D9E),
+                textAlign: TextAlign.center,
+                title: Text(
+                  'About',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Bangers',
+                      fontSize: 28.0,
+                      fontWeight: FontWeight.normal),
+                ),
+                icon: Icon(Icons.info)),
           ],
         ),
       ),
     );
   }
 }
-
